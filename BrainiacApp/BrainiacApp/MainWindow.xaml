@@ -1,0 +1,167 @@
+﻿<Window x:Class="BrainiacApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrainiacApp"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Style="{StaticResource CustomWindowStyle}"
+        Height="835" Width="1180" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="192"
+                />
+            <ColumnDefinition
+                Width="3"
+                />
+            <ColumnDefinition
+                Width="15"
+                />
+            <ColumnDefinition
+                Width="3"
+                />
+            <ColumnDefinition
+                />
+        </Grid.ColumnDefinitions>
+
+        <Grid
+            Grid.Column="4">
+
+            <Image Margin="0,0,669,662">
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/sol.png" />
+                </Image.Source>
+            </Image>
+
+
+            <Image Margin="664,-167,0,492">
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/sağ.png" />
+                </Image.Source>
+            </Image>
+
+            <Image Margin="0,0,669,662">
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/sol.png" />
+                </Image.Source>
+            </Image>
+
+
+            <Image Margin="664,-167,0,492">
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/sağ.png" />
+                </Image.Source>
+            </Image>
+
+
+            <Frame 
+                NavigationUIVisibility="Hidden"
+                x:Name="MainFrame" Grid.ColumnSpan="2"/>
+
+        </Grid>
+
+
+        <Grid
+            Grid.Column="0"
+            Background="#071E3D">
+
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="180"
+                    />
+                <RowDefinition
+                    />
+            </Grid.RowDefinitions>
+
+            <Image>
+                <Image.Source>
+                    <BitmapImage  
+                        UriSource="/Images/logo.png" />
+                </Image.Source>
+            </Image>
+
+            <StackPanel
+                Grid.Row="1">
+
+                <RadioButton
+                    Name="home"
+                    Height="55"
+                    Content="Home"
+                    FontSize="17"
+                    Foreground="White"
+                    IsChecked="True"
+                    Checked="RadioButton_Checked"
+                    Style="{StaticResource MenuButtonTheme1}">
+                </RadioButton>
+
+                <RadioButton
+                    Name="test"
+                    Height="55"
+                    Content="Test"
+                    FontSize="17"
+                    Foreground="White"
+                    Checked="RadioButton_Checked"
+                    Style="{StaticResource MenuButtonTheme2}"
+                    />
+
+                <RadioButton
+                    Name="aboutBrainiac"
+                    Height="55"
+                    Content="About Brainiac"
+                    FontSize="17"
+                    Foreground="White"
+                    Checked="RadioButton_Checked"
+                    Style="{StaticResource MenuButtonTheme3}"
+                    />
+
+                <RadioButton
+                    Name="aboutSkills"
+                    Height="55"
+                    Content="About Skills"
+                    FontSize="17"
+                    Foreground="White"
+                    Checked="RadioButton_Checked"
+                    Style="{StaticResource MenuButtonTheme3}"
+                    />
+
+                <RadioButton
+                    Name="helpCenter"
+                    Height="55"
+                    Content="Help Center"
+                    FontSize="17"
+                    Foreground="White"
+                    Checked="RadioButton_Checked"
+                    Style="{StaticResource MenuButtonTheme4}"
+                    />
+
+            </StackPanel>
+        </Grid>
+
+        <Rectangle Grid.Column="1" Grid.RowSpan="1000">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#17B978" Offset="0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Grid.Column="3" Grid.RowSpan="1000">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#086972" Offset="0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+    </Grid>
+
+</Window>
